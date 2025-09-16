@@ -1,9 +1,14 @@
 # -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
 
 PortSystem          1.0
+PortGroup           github 1.0
 
 name                cacti
-version             1.1.27
+github.setup        Cacti cacti 1.2.30 release/v
+github.tarball_from archive
+distname            ${version}
+github.master_sites         ${github.homepage}/archive/refs/tags/release
+version             1.2.30
 categories          net
 license             GPL-2+
 platforms           any
@@ -16,13 +21,10 @@ long_description    Cacti is a complete network graphing solution designed \
                     graphing functions.
 
 homepage            https://www.cacti.net
-master_sites        https://www.cacti.net/downloads
 
-checksums           rmd160  313d40867437bbae1c8cde3a5ca106e41b70e50d \
-                    sha256  b4a5aa2a772aff7eb5abae31d07ed86a1c00300094d3c3c63091554fbb0deea9
-
-depends_lib         path:bin/mysql_config5:mysql57 \
-                    port:rrdtool
+checksums           rmd160  4c890472af4d1f0a3ee3981b335fe5a47f81e303 \
+                    sha256  85f771ad77df3344fee1404250a0f5fa27c43b02ff5ebb9b66e5eda6ca954e4d \
+                    size    20346032
 
 use_configure       no
 build {}
@@ -31,8 +33,8 @@ set cactidir        ${prefix}/share/cacti
 
 destroot {
 # Copy Cacti files
-    file mkdir ${destroot}${cactidir}
-    system "cp -R ${worksrcpath}/* ${destroot}${cactidir}"
+    xinstall -m 755 -d ${destroot}${cactidir}
+    xinstall -m 755 ${worksrcpath}/* ${destroot}${cactidir}"
 }
 
 notes "
