@@ -3,9 +3,10 @@
 PortSystem          1.0
 PortGroup           select 1.0
 PortGroup           java 1.0
+PortGroup           github 1.0
 
-name                flyway
-version             11.1.0
+github.setup        flyway flyway 11.14.1
+github.tarball_from archive
 
 categories          java devel
 license             Apache-2
@@ -20,13 +21,12 @@ long_description    Flyway is an open-source database migration tool. \
 
 homepage            https://flywaydb.org/
 
-master_sites        https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/${version}/
-distname            ${name}-commandline-${version}
-worksrcdir          ${name}-${version}
+master_sites        https://github.com/flyway/flyway/archive/refs/tags
+distname            ${name}-${version}
 
-checksums           rmd160  4d97aa3f80c0bebcd02210501e0b6b8c0f12fca0 \
-                    sha256  efe0ad5eba3d5dfcbf7cee5308256cc89090d6de5f4b5705b5112cd9387a4f7e \
-                    size    202749404
+checksums           rmd160  6784d89a98c473efb7f797ef1499f1357170f663 \
+                    sha256  149f8e8214c9971cc3f94c73a63b75ad7bd2f8c2e57e1d2d26854eb0014989d8 \
+                    size    239578809
 
 java.version        1.8+
 java.fallback       openjdk17
