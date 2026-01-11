@@ -23,7 +23,7 @@ checksums           rmd160  ae0a2270a4c7f33f5af7ef64c967693824fecbee \
                     sha256  99e20274d581949b9a5998564485f567732e7888ac786c2edb43493048e4d0ef \
                     size    1525119
 
-depends_build       bin:node:nodejs14
+depends_build       bin:node:nodejs18
 
 use_configure       no
 use_xcode           yes
