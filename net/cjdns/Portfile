@@ -2,6 +2,8 @@
 
 PortSystem          1.0
 PortGroup           github 1.0
+PortGroup           cargo 1.0
+PortGroup           rust 1.0
 
 github.setup        cjdelisle cjdns 22.3 cjdns-v
 github.tarball_from archive
