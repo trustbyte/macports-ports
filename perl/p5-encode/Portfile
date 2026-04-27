@@ -4,15 +4,15 @@ PortSystem          1.0
 PortGroup           perl5 1.0
 
 perl5.branches      5.28 5.30 5.32 5.34
-perl5.setup         Encode 3.22 ../../authors/id/D/DA/DANKOGAI
+perl5.setup         Encode 3.23 ../../authors/id/D/DA/DANKOGAI
 revision            0
 license             {Artistic-1 GPL}
 maintainers         nomaintainer
 description         Encode - character encodings in Perl
 long_description    {*}${description}
 
-checksums           rmd160  7a5d78435cb9a7bb58ad2fca27426cf7c9416485 \
-                    sha256  542507dad2fff2ceb3b5e7f22b0be99124ffcd0d42a873948d3e27f12d6b4932 \
-                    size    2094313
+checksums           rmd160  cccb3f5d27f5e73670cd2f2e3fc8b9266e1ca944 \
+                    sha256  0e8fe2e58c209b417c0bf5549f6ee18b274ff2f99134b5da92503c80fa07ef05 \
+                    size    2094455
 
 perl5.link_binaries no
