@@ -190,7 +190,7 @@ description {Include support for better USB device discovery} {
 }
 
 variant dbus description {Include support for DBUS} {
-    depends_lib-append      port:dbus-glib
+    depends_lib-append      port:dbus
 
     build.args-replace      dbus_export=no  dbus_export=yes
     test.args-replace       dbus_export=no  dbus_export=yes
