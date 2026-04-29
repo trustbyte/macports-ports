@@ -4,14 +4,14 @@ PortSystem              1.0
 PortGroup               github 1.0
 PortGroup               cargo 1.0
 
-github.setup            AlexsJones llmfit 0.9.15 v
+github.setup            AlexsJones llmfit 0.9.17 v
 github.tarball_from     archive
 revision                0
 
 checksums               ${distname}${extract.suffix} \
-                        rmd160  bb1633f13d3c4ba3b8bb0d88e074989655287869 \
-                        sha256  b42e018599be79f4230bf5939169fafd9ebd34b1dd92f5d17354d914ac66da7b \
-                        size    2691195
+                        rmd160  6b54daff4885085116c15a974decaa3d242283ce \
+                        sha256  6ffd818f95b71be27c87a91f750f84344eba48d00c9facc09e8d47f2ce6cb628 \
+                        size    2992977
 
 categories              llm
 platforms               macosx
