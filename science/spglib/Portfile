@@ -26,3 +26,5 @@ checksums           rmd160  7b44286abbc06fc7dc56688c25fa1c9fde04bc1c \
 # Undefined symbols: "__ZN7testing8internal13PrintStringToERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPSo"
 compiler.c_standard     2011
 compiler.cxx_standard   2011
+
+configure.args      -DSPGLIB_WITH_TESTS=OFF
