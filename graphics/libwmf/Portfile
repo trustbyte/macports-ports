@@ -38,10 +38,11 @@ configure.args      --disable-silent-rules \
                     --without-x \
                     --with-fontdir=${prefix}/share/fonts/${name}
 
-# make sure the build uses the vendered gd packages to avoid build faliures
-# when the gd2 port is installed
+# make sure the build uses the vendered, and patched, gd package to
+# avoid build faliures when the gd2 port is installed
 post-configure {
-    system -W ${worksrcpath} "${patch.cmd} ${patch.pre_args} < [shellescape ${filespath}/patch-src_ipa_Makefile.diff]"
+    reinplace "s|AM_CPPFLAGS = -I${prefix}/include|AM_CPPFLAGS = |g" ${worksrcpath}/src/ipa/Makefile
+    reinplace "s|CPPFLAGS = -I${prefix}/include|CPPFLAGS = |g" ${worksrcpath}/src/ipa/Makefile
 }
 
 post-destroot {
