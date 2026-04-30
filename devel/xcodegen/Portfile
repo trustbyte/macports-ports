@@ -6,7 +6,7 @@ PortGroup           muniversal 1.1
 
 github.setup        yonaskolb XcodeGen 2.45.4
 name                [string tolower ${github.project}]
-revision            0
+revision            1
 github.tarball_from archive
 
 categories          devel
@@ -39,5 +39,5 @@ if {${universal_possible} && [variant_isset universal]} {
 destroot {
     xinstall -m 755 ${worksrcpath}/.build/release/${name} ${destroot}${prefix}/bin/
     xinstall -d ${prefix}/share/${name}
-    copy ${worksrcpath}/SettingPresets ${prefix}/share/${name}
+    copy ${worksrcpath}/SettingPresets ${destroot}${prefix}/share/${name}
 }
