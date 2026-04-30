@@ -4,7 +4,7 @@ PortSystem              1.0
 PortGroup               select 1.0
 PortGroup               github 1.0
 
-github.setup            tfutils tfenv 3.2.0 v
+github.setup            tfutils tfenv 3.2.2 v
 github.tarball_from     archive
 license                 MIT
 categories              sysutils
@@ -16,9 +16,9 @@ maintainers             {amake @amake} openmaintainer
 description             Terraform version manager
 long_description        {*}${description}
 
-checksums               rmd160  08eeaef451ba16adfd0b9d392ca3ead0b1e09f75 \
-                        sha256  19c1c2d9d86338ca8db3740d94e1a559d26103035fb7dd29ef667cf6d543e436 \
-                        size    45036
+checksums               rmd160  b170dbfbf6465c0a2be23b6901a515059369d344 \
+                        sha256  c9c8b2e2588cf026aafa9803dfdefdfc7aa258577c24ea9624fe53f764edea47 \
+                        size    80290
 
 depends_run             port:terraform_select
 
