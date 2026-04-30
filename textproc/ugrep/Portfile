@@ -4,7 +4,7 @@ PortSystem          1.0
 PortGroup           github 1.0
 PortGroup           legacysupport 1.1
 
-github.setup        Genivia ugrep 7.7.0 v
+github.setup        Genivia ugrep 7.8.0 v
 github.tarball_from archive
 revision            0
 
@@ -17,9 +17,9 @@ long_description    {*}${description}: search file systems, source code, text, \
                     binary files, archives (cpio/tar/pax/zip), compressed files \
                     (gz/Z/bz2/lzma/xz/lz4/zstd), documents and more.
 
-checksums           rmd160  6cd5bcab810abcff3a99d7624c218320b509ee97 \
-                    sha256  128eb172399444689725e96626598bc913a880609a51e954646f91219ca1f519 \
-                    size    7188749
+checksums           rmd160  736da78f198f2a1edfb7e24d292f259b547e0adc \
+                    sha256  8563eb731f206187c6a0e0652be1cdb8afdf368ddb2e48ba2b25c0b06d8b0aa6 \
+                    size    7209025
 
 compiler.cxx_standard 2011
 
