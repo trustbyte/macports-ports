@@ -32,11 +32,17 @@ depends_lib \
     port:freetype \
     port:expat
 
-
-configure.args      --with-jpeg \
+configure.args      --disable-silent-rules \
+                    --with-jpeg \
                     --with-expat \
                     --without-x \
                     --with-fontdir=${prefix}/share/fonts/${name}
+
+# make sure the build uses the vendered gd packages to avoid build faliures
+# when the gd2 port is installed
+post-configure {
+    system -W ${worksrcpath} "${patch.cmd} ${patch.pre_args} < [shellescape ${filespath}/patch-src_ipa_Makefile.diff]"
+}
 
 post-destroot {
     xinstall -m 0755 -d ${destroot}${prefix}/share/doc/${name}
