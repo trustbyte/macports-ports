@@ -37,19 +37,19 @@ proc terraformDistBase {} {
 }
 
 subport terraform-1.15 {
-    set patchNumber     0
+    set patchNumber     1
     revision            0
 
     set armAvailable    yes
 
     checksums           [terraformDistBase]_amd64.zip \
-                        rmd160  5054a0807aa200e9332bd4e044b70e1da080fb94 \
-                        sha256  e0871ff6d8a477ed07fdb5a4a4ca4325325e35c95b4930e7ccdeae242dba897d \
-                        size    36406036 \
+                        rmd160  36dfe10280f97de1a2cfa6c61c5396f6a9a48d93 \
+                        sha256  182fcb3d94e52daf904e412541d92cbe2a86bf28c0fb442da15ede2aa8c3fe76 \
+                        size    36404843 \
                         [terraformDistBase]_arm64.zip \
-                        rmd160  1475c87c537114347d1c9c01357a3a130ffa188d \
-                        sha256  f2e52766a58f1e26e83200b4b4e5fe813c827786d20fa7aa01d9bcc1e9918b26 \
-                        size    32782416
+                        rmd160  3900926da3b2196b05912511271128b2aa9f7bbb \
+                        sha256  01535b614be222dbd1344a8eb9162c3b54cc3b65c4212e8d4d9a2be72666ccff \
+                        size    32777540
 
     set customDistSubDir no
 }
@@ -396,7 +396,7 @@ if {${subport} eq ${name}} {
     PortGroup           obsolete 1.0
 
     replaced_by         ${latestVersion}
-    version             1.15.0
+    version             1.15.1
     revision            0
 
 } elseif {${subport} eq "terraform_select"} {
