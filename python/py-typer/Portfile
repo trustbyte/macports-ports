@@ -4,7 +4,7 @@ PortSystem          1.0
 PortGroup           python 1.0
 
 name                py-typer
-version             0.25.0
+version             0.25.1
 revision            0
 
 categories-append   devel
@@ -21,9 +21,9 @@ homepage            https://github.com/tiangolo/typer
 python.versions     310 311 312 313 314
 python.pep517_backend pdm
 
-checksums           rmd160  5f619eaa5f5964db5213368ef11d463fa26deef9 \
-                    sha256  123eaf9f19bb40fd268310e12a542c0c6b4fab9c98d9d23342a01ff95e3ce930 \
-                    size    120150
+checksums           rmd160  835d2cc89dd41478314344e7da5faf387b1e4fa6 \
+                    sha256  9616eb8853a09ffeabab1698952f33c6f29ffdbceb4eaeecf571880e8d7664cc \
+                    size    122276
 
 if {${name} ne ${subport}} {
     depends_run-append \
