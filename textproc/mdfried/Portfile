@@ -4,14 +4,14 @@ PortSystem              1.0
 PortGroup               github 1.0
 PortGroup               cargo 1.0
 
-github.setup            benjajaja mdfried 0.19.6 v
+github.setup            benjajaja mdfried 0.19.7 v
 github.tarball_from     archive
 revision                0
 
 checksums               ${distname}${extract.suffix} \
-                        rmd160  b923fa3e375b59fba230050d049d6b6f24134749 \
-                        sha256  feac0bb4a25921fb6fc0b9c833ecee2f926d801d9c956305843f887cfec775c1 \
-                        size    15816190
+                        rmd160  44da02c5db0e743b744619a3ae1a8067a0dd51ef \
+                        sha256  c9cb3a3faa22e01128632806229947741004c13a22041378778e3186b8a95b72 \
+                        size    15816418
 
 categories              textproc
 platforms               macosx
