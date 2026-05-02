@@ -205,6 +205,7 @@ post-destroot {
 }
 
 variant universal {
+    patchfiles-append   hacl_universal2.patch
     post-patch {
         set universal_arch_flags {}
         set arch_run_32bit {}
