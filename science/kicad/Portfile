@@ -97,6 +97,8 @@ if {${name} eq ${subport}} {
         -DDOXYGEN_DOT_EXECUTABLE=${prefix}/bin/dot \
         -DDOXYGEN_EXECUTABLE=${prefix}/bin/doxygen \
         -DNGSPICE_LIB_NAME=libngspice.dylib \
+        -DOCC_INCLUDE_DIR=${prefix}/include/opencascade \
+        -DOCC_LIBRARY_DIR=${prefix}/lib \
         -Wno-dev
 
     post-destroot {
