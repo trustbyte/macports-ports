@@ -13,7 +13,7 @@ legacysupport.newest_darwin_requires_legacy 15
 
 name                    gmsh
 version                 4.15.0
-revision                0
+revision                1
 categories              science
 license                 GPL-2+
 maintainers             {mcalhoun @MarcusCalhoun-Lopez} openmaintainer
@@ -78,8 +78,6 @@ configure.args-append   -DENABLE_BUILD_LIB=ON \
 configure.args-append   -DENABLE_ACIS=OFF \
                         -DENABLE_GETDP=OFF
 
-configure.env-append    CASROOT=${prefix}/libexec/opencascade
-
 pre-configure {
     configure.args-append \
                         -DBLAS_LAPACK_LIBRARIES="-L${prefix}/lib ${linalglib}"
@@ -116,8 +114,7 @@ variant petsc description {Enable PETSc linear solvers and SLEPc eigensolvers} {
 
 variant oce description {use Community Edition version of Open CASCADE} {
     depends_lib-replace port:opencascade port:oce
-    configure.env-replace \
-                        CASROOT=${prefix}/libexec/opencascade \
+    configure.env-append \
                         CASROOT=${prefix}/libexec/oce
 }
 
