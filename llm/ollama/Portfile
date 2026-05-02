@@ -3,7 +3,7 @@
 PortSystem          1.0
 PortGroup           golang 1.0
 
-go.setup            github.com/ollama/ollama 0.21.2 v
+go.setup            github.com/ollama/ollama 0.22.1 v
 github.tarball_from archive
 revision            0
 
@@ -17,9 +17,9 @@ description         ${name} runs and manages LLMs
 long_description    Get up and running with large language models easily
 homepage            https://ollama.com
 
-checksums           rmd160  cc09e26595ab681f31a86b0b4095ca7b837c94e8 \
-                    sha256  660b6f51975b7d6516b2e63ce0b760acadc31a50eda81f3c211727d33e260aa3 \
-                    size    27896062
+checksums           rmd160  d018c3ce81389bcaa9d80757c67e1b2a5bac5c16 \
+                    sha256  b6dd1c89b0a63f2689f357c5463e4d417e68fbe7e7f79d73c09926ef698b719a \
+                    size    28018413
 
 # See https://github.com/ollama/ollama/pull/6854
 patchfiles-append   patch-NO_MMAP_ENV.diff
