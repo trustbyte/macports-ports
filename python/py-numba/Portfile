@@ -47,6 +47,8 @@ variant tbb description "Add TBB support" {
     build.env-delete    NUMBA_DISABLE_TBB=1
 
     depends_lib-append  port:onetbb
+
+    build.env-append    TBBROOT=${prefix}
 }
 
 if {${name} ne ${subport}} {
