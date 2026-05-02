@@ -16,10 +16,6 @@ checksums           rmd160  0fb18c3671c1ecd54a21f1b20307d5570573b5cd \
                     sha256  36db8f7a19627983ceeefc726a3d7fe0e9ff5685597dab82e2354b4e255ff42f \
                     size    139901
 
-# As with R-quanteda, it fails to configure properly.
-# Help it.
-patchfiles          patch-Makevars.diff
-
 depends_lib-append  port:onetbb \
                     port:R-nsyllable \
                     port:R-proxyC \
