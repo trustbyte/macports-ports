@@ -8,7 +8,7 @@ PortGroup               boost 1.0
 
 github.setup            AcademySoftwareFoundation openvdb 13.0.0 v
 github.tarball_from     archive
-revision                0
+revision                1
 categories              graphics
 license                 {MPL-2 LGPL-2.1+}
 maintainers             {mcalhoun @MarcusCalhoun-Lopez} \
@@ -46,6 +46,9 @@ compiler.cxx_standard   2017
 compiler.blacklist-append {macports-clang-1[6-9]}
 
 boost.version           1.88
+
+# Use OpenGL framework instead of mesa
+configure.pre_args-delete   -DCMAKE_FIND_FRAMEWORK=LAST
 
 # Disable building command-line tools.
 # We control whether to build them using the +utils variant below.
