@@ -5,7 +5,7 @@ PortGroup           R 1.0
 
 # GitHub version lags behind.
 R.setup             cran quanteda quanteda.textstats 0.97.2
-revision            0
+revision            1
 categories-append   textproc
 maintainers         nomaintainer
 license             GPL-3
@@ -19,10 +19,6 @@ checksums           rmd160  0fb18c3671c1ecd54a21f1b20307d5570573b5cd \
 # As with R-quanteda, it fails to configure properly.
 # Help it.
 patchfiles          patch-Makevars.diff
-
-post-patch {
-    reinplace "s|@PREFIX@|${prefix}|g" ${worksrcpath}/src/Makevars
-}
 
 depends_lib-append  port:onetbb \
                     port:R-nsyllable \

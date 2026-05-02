@@ -6,7 +6,7 @@ PortGroup           github 1.0
 
 github.setup        Viskores viskores 1.1.1 v
 github.tarball_from archive
-revision            0
+revision            1
 
 categories          graphics science devel
 license             BSD
@@ -46,7 +46,6 @@ variant openmp description {Enable OpenMP support} {
 
 variant tbb description {Enable Intel Threading Building Blocks support} {
     configure.args-append   -DViskores_ENABLE_TBB=ON
-    configure.env-append    TBB_ROOT=${prefix}/libexec/onetbb
     depends_lib-append      port:onetbb
 }
 
