@@ -4,18 +4,20 @@ PortSystem          1.0
 PortGroup           python 1.0
 
 name                py-google-crc32c
-version             1.7.1
+python.rootname     google_crc32c
+version             1.8.0
 revision            0
+
 categories-append   devel
 license             Apache-2
 maintainers         nomaintainer
 
 description         Python wrapper of Google CRC32C library 
 long_description    {*}${description}
-homepage            https://github.com/googleapis/python-crc32c
-distname            google_crc32c-${version}
-checksums           rmd160  6d4fed948625c7f0045f8c93eeab61d205923fd4 \
-                    sha256  2bff2305f98846f3e825dbeec9ee406f89da7962accdb29356e4eadc251bd472 \
-                    size    14495
+homepage            https://github.com/googleapis/google-cloud-python/tree/main/packages/google-crc32c
 
-python.versions     310 311 312 313
+checksums           rmd160  e79ce1ba1f2449d2ae24c842f6e6e7be584e5f74 \
+                    sha256  a428e25fb7691024de47fecfbff7ff957214da51eddded0da0ae0e0f03a2cf79 \
+                    size    14192
+
+python.versions     310 311 312 313 314
