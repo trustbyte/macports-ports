@@ -14,7 +14,7 @@ github.setup        scipopt soplex ${release_version} release-
 version             [string index ${release_version} 0].[string range ${release_version} 1 1].[string range ${release_version} 2 end]
 revision            0
 categories          math
-license             ZIB Academic Licence
+license             Apache-2
 
 maintainers         nomaintainer
 
