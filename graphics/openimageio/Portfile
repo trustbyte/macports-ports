@@ -97,10 +97,10 @@ compiler.blacklist-append {clang < 700}
 compiler.cxx_standard   2017
 configure.args-append   -DCMAKE_CXX_STANDARD=17
 
+compiler.thread_local_storage yes
+
 # Use OpenGL framework instead of mesa
 configure.pre_args-delete   -DCMAKE_FIND_FRAMEWORK=LAST
-
-compiler.thread_local_storage yes
 
 configure.cxxflags-append \
                         -Wno-deprecated-declarations \
@@ -128,7 +128,7 @@ depends_build-append    port:robin-map
 depends_lib-append      port:zlib \
                         port:bzip2 \
                         port:libpng \
-                        port:tiff \
+                        port:tiff
 
 # optional components
 
