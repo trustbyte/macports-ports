@@ -4,7 +4,7 @@ PortSystem              1.0
 PortGroup               github 1.0
 PortGroup               cargo  1.0
 
-github.setup            vladkens macmon 0.7.1 v
+github.setup            vladkens macmon 0.7.2 v
 github.tarball_from     archive
 revision                0
 categories              sysutils
@@ -16,9 +16,9 @@ long_description        {*}${description}, using private macOS APIs. CPU/GPU/RAM
                         and temperature.
 
 checksums               ${name}-${version}${extract.suffix} \
-                        rmd160  77b972511d539c0da19af33c652a647a9e398c94 \
-                        sha256  15b1b7a7d050bcf78360a8b231c5841d1b051cd9a4f87f5ceee2b0f4ebc38449 \
-                        size    45919
+                        rmd160  babfbb5d546be15f0c153e9388f5ee7bb711af0b \
+                        sha256  ac8169a4a59afe2a93e033dbf0215682d78a6dddf600398634d0192868787fed \
+                        size    46150
 
 destroot {
     xinstall -m 0755 ${worksrcpath}/target/[cargo.rust_platform]/release/${name} ${destroot}${prefix}/bin/
