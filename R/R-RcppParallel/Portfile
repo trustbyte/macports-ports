@@ -20,9 +20,14 @@ checksums           rmd160  b6a008b22124aa107d8ee13aaeefba72be2fa289 \
 # https://github.com/stan-dev/rstan/issues/979
 depends_lib-append  port:onetbb
 
+build.env-append    TBB_INC=${prefix}/include \
+                    TBB_LIB=${prefix}/lib
+
 depends_test-append port:R-knitr \
                     port:R-Rcpp \
                     port:R-rmarkdown \
                     port:R-RUnit
 
 test.run            yes
+test.env-append     TBB_INC=${prefix}/include \
+                    TBB_LIB=${prefix}/lib
