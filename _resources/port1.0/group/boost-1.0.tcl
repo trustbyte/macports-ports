@@ -74,7 +74,7 @@ proc boost::cpp_flags {} {
 }
 
 proc boost::configure_build {} {
-    global cmake.build_dir meson.build_type
+    global cmake.module_path
     global boost_cache_version_nodot boost_cache_depends boost_cache_cxxflags
     global boost_cache_ldflags boost_cache_cmake_flags boost_cache_cmake
     global boost_cache_env_vars boost_cache_cpath boost_cache_cppflags
@@ -152,6 +152,9 @@ proc boost::configure_build {} {
             foreach flag ${boost_cache_cmake_flags} {
                 configure.args-delete ${flag}
             }
+        }
+        if {[info exists cmake.module_path]} {
+            cmake.module_path-append    [boost::install_area]
         }
         # Try and cover all bases here and set all possible variables ...
         # See https://cmake.org/cmake/help/latest/module/FindBoost.html
