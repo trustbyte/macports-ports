@@ -16,7 +16,7 @@ maintainers         {judaew @judaew} openmaintainer
 description         OpenGL shader compiler libraries & tools
 long_description    Glslang is the official reference compiler for \
                     the OpenGL and OpenGL ES shading languages.
-homepage            https://www.khronos.org/opengles/sdk/tools/Reference-Compiler/
+homepage            https://www.khronos.org/opengles/sdk/Reference-Compiler/
 
 checksums           sha256  18cdf7d40a39001dde842c6a1338b2c9321ac5e487139b9d52b4b9c666da3c86 \
                     rmd160  ad6e42ee708366c269740a80e1bbd95af98c1d0d \
