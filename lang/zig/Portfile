@@ -29,10 +29,12 @@ checksums           rmd160  ecede6fbf52ee0e8adc5e72ae51678c7f5452b22 \
 
 # macos stage3: add link support for system libc++: https://github.com/ziglang/zig/pull/23264
 # improved patch from https://github.com/Homebrew/homebrew-core/pull/278854
-# stop zig from refusing to build on 7GB of RAM, that's all a macOS github runner has.
-patchfiles-append   patch-macos-libc++-dynamic-link.diff \
-                    patch-7gb-rss.diff
+patchfiles-append   patch-macos-libc++-dynamic-link.diff
 patch.args          -p1
+post-patch {
+    # stop zig from refusing to build on 7GB of RAM, that's all a macOS github runner has.
+    reinplace "s|max_rss = 8_000_000_000|max_rss = 7_500_000_000|g" ${worksrcpath}/build.zig
+}
 
 set llvm_version    21
 
