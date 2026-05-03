@@ -97,18 +97,15 @@ if {${subport} ne ${name}} {
         set bash_completion_dir ${prefix}/share/${subport}/bash-completion/completions
         xinstall -d ${destroot}${bash_completion_dir}
         xinstall -m 0644 ${worksrcpath}/data/shell-completions/bash/meson ${destroot}${bash_completion_dir}
-        xinstall -m 0644 ${worksrcpath}/data/shell-completions/bash/meson ${destroot}${bash_completion_dir}
 
         set zsh_completion_dir ${prefix}/share/${subport}/zsh/site-functions
         xinstall -d ${destroot}${zsh_completion_dir}
-        xinstall -m 0644 ${worksrcpath}/data/shell-completions/zsh/_meson ${destroot}${zsh_completion_dir}
         xinstall -m 0644 ${worksrcpath}/data/shell-completions/zsh/_meson ${destroot}${zsh_completion_dir}
 
         # install editor syntax files
         set vim_dir ${prefix}/share/${subport}/vim/vimfiles
         foreach d {ftdetect ftplugin syntax indent} {
             xinstall -d ${destroot}${vim_dir}/${d}
-            xinstall -m 0644 ${worksrcpath}/data/syntax-highlighting/vim/${d}/meson.vim ${destroot}${vim_dir}/${d}
             xinstall -m 0644 ${worksrcpath}/data/syntax-highlighting/vim/${d}/meson.vim ${destroot}${vim_dir}/${d}
         }
     }
